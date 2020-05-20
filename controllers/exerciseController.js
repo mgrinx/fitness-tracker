@@ -15,7 +15,7 @@ module.exports = {
             }
         );
     },
-    delete: async (exerciseId) => {
+    delete: async exerciseId => {
         let ex = await db.Exercise.findById(exerciseId);
         await db.Workout.updateMany({},
             {
