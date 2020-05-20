@@ -1,11 +1,11 @@
 <div class="card m-2" style="width: 10rem;">
   <div class="card-body p-0">
-    <h5 class="card-title mx-3 mt-3">{{namef}}</h5>
+    <h5 class="card-title mx-3 mt-3 mb-2">{{namef}}</h5>
     <p class="card-text text-muted mx-3 my-0">{{datef}}</p>
     <p class="card-text text-muted mx-3 mt-0 mb-3">{{exercises.length}} exercises</p>
   </div>
   <div class="card-footer">
-      <a href="{{_id}}" class="btn-sm btn-primary">Edit</a>
-      <a href="#" class="workout-delete-button btn-sm btn-danger" data-toggle="modal" data-target="#confirm-delete-workout-modal" data-workout-id="{{_id}}" data-workout-title="{{name}}">Delete</a>
+    <a href="{{_id}}" class="btn-sm btn-info">View</a>
+    <a href="#" class="delete-workout-button btn-sm btn-danger" data-toggle="modal" data-target="#confirm-delete-workout-modal" data-workout-id="{{_id}}" data-workout-title="{{name}}">Delete</a>
   </div>
 </div>

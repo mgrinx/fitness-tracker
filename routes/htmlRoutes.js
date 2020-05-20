@@ -5,7 +5,7 @@ module.exports = app => {
     // prevent favicon error
     app.get("/favicon.ico", (req, res) => res.status(200));
 
-    // page for viewing a single workout and adding exercises
+    // page for viewing a single workout's exercises
     app.get("/:id", (req, res) => {
         db.Workout.findById(req.params.id)
         .lean()
@@ -14,6 +14,19 @@ module.exports = app => {
                 workout: dbModel
             }
             res.render("exercises", hbsObject);
+        })
+        .catch(err => console.log(err));
+    });
+
+    // page for creating a new exercise
+    app.get("/:id/new", (req, res) => {
+        db.Workout.findById(req.params.id)
+        .lean()
+        .then(dbModel => {
+            let hbsObject = {
+                workout: dbModel
+            }
+            res.render("newExercise", hbsObject);
         })
         .catch(err => console.log(err));
     });

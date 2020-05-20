@@ -3,11 +3,11 @@
 	<div class="row">
     <div class="col-2"></div>
 		<div class="col-8 text-center">
-      <h4 class="my-3">Create a new workout</h4>
+      <h4 class="my-4">Create a new workout</h4>
 			<form id="create-workout-form" class="input-group">
 				<input id="workout-name-input" type="text" class="form-control" name="name" placeholder="Enter workout name">
         <div class="input-group-append">
-				  <button type="submit" class="btn btn-primary" id="text-enter-button">Submit</button>
+				  <button type="submit" class="btn btn-primary">Submit</button>
         </div>
 			</form>
 		</div>
@@ -18,7 +18,7 @@
 
   <div class="row">
     <div class="col-12 text-center">
-      <h4 class="my-3">All workouts</h4>
+      <h4 class="m-3">All workouts</h4>
       <div class="d-flex flex-wrap justify-content-center">
         {{#each workouts}}{{>workout-card}}{{/each}}
       </div>
@@ -37,10 +37,12 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div id="workout-delete-message" class="modal-body"></div>
+      <div class="modal-body">
+        <span id="delete-workout-message" class="text-break"></span>
+      </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-        <button id="workout-confirm-delete-button" type="button" class="btn btn-danger">Delete</button>
+        <button id="confirm-delete-workout-button" type="button" class="btn btn-danger">Delete</button>
       </div>
     </div>
   </div>

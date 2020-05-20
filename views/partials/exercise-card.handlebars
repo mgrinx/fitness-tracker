@@ -1,0 +1,14 @@
+<div class="card m-2" style="width: 12rem;">
+  <div class="card-body p-0 mb-3">
+    <h5 class="card-title mx-3 mt-3 mb-2">{{name}}</h5>
+    {{#if type}}<p class="card-text text-muted mx-3 my-0">type: {{type}}</p>{{/if}}
+    {{#if weight}}<p class="card-text text-muted mx-3 my-0">weight: {{weight}}</p>{{/if}}
+    {{#if reps}}<p class="card-text text-muted mx-3 my-0">reps: {{reps}}</p>{{/if}}
+    {{#if sets}}<p class="card-text text-muted mx-3 my-0">sets: {{sets}}</p>{{/if}}
+    {{#if duration}}<p class="card-text text-muted mx-3 my-0">duration: {{duration}}</p>{{/if}}
+    {{#if distance}}<p class="card-text text-muted mx-3 my-0">distance: {{distance}}</p>{{/if}}
+  </div>
+  <div class="card-footer">
+    <a href="#" class="delete-exercise-button btn-sm btn-danger" data-toggle="modal" data-target="#confirm-delete-exercise-modal" data-exercise-id="{{_id}}" data-exercise-parent="{{parent}}" data-exercise-title="{{name}}">Delete</a>
+  </div>
+</div>

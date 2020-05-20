@@ -6,7 +6,7 @@ A simple app to demonstrate express handlebars and mongodb integration.
 
 ## Usage
 
-### [Try it!](#)
+### [Try it!](http://enigmatic-taiga-74346.herokuapp.com/)
 coming soon
 
 ## Features
