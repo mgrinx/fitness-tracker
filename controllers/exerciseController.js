@@ -27,7 +27,7 @@ module.exports = {
                 new: false,
                 useFindAndModify: false
             }
-        )
+        );
         return await db.Exercise.deleteOne({ _id: exerciseId });
     }
 };
