@@ -1,6 +1,7 @@
 # Fitness Tracker
 
-A simple app to demonstrate express handlebars and mongodb integration.
+A workout tracking app to demonstrate express handlebars and mongoose integration.  
+Create daily workouts and populate them with exercise info.
 
 ![Screenshot](Screenshot.png)
 
