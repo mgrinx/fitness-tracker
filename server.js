@@ -16,9 +16,13 @@ require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/fitnesstracker");
+mongoose.connect(process.env.MONGODB_URI ||
+    "mongodb://localhost/fitnesstracker", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
 
 // Start the API server
-app.listen(PORT, function() {
+app.listen(PORT, () => {
     console.log(`Now listening on port: ${PORT}`);
 });

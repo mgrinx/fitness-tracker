@@ -1,0 +1,47 @@
+<div class="container">
+
+	<div class="row">
+    <div class="col-2"></div>
+		<div class="col-8 text-center">
+      <h4 class="my-3">Create a new workout</h4>
+			<form id="create-workout-form" class="input-group">
+				<input id="workout-name-input" type="text" class="form-control" name="name" placeholder="Enter workout name">
+        <div class="input-group-append">
+				  <button type="submit" class="btn btn-primary" id="text-enter-button">Submit</button>
+        </div>
+			</form>
+		</div>
+    <div class="col-2"></div>
+	</div>
+
+  <br>
+
+  <div class="row">
+    <div class="col-12 text-center">
+      <h4 class="my-3">All workouts</h4>
+      <div class="d-flex flex-wrap justify-content-center">
+        {{#each workouts}}{{>workout-card}}{{/each}}
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Modals -->
+<div class="modal fade" id="confirm-delete-workout-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Confirm deletion</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div id="workout-delete-message" class="modal-body"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button id="workout-confirm-delete-button" type="button" class="btn btn-danger">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>

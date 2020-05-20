@@ -1,0 +1,26 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+      <h4 class="text-center my-3">All exercises for {{workout.name}}</h4>
+      {{#each workout.exercises}}<div class="col-12">{{name}}</div>{{/each}}
+    </div>
+    <div class="col-2"></div>
+  </div>
+
+	{{!-- <div class="row">
+    <div class="col-2"></div>
+		<div class="col-8 text-center">
+      <h4 class="my-3">Create a new exercise</h4>
+			<form id="create-workout-form" class="input-group">
+				<input id="workout-name-input" type="text" class="form-control" name="name" placeholder="Enter workout name">
+        <div class="input-group-append">
+				  <button type="submit" class="btn btn-primary" id="text-enter-button">Submit</button>
+        </div>
+			</form>
+		</div>
+    <div class="col-2"></div>
+	</div> --}}
+
+</div>
