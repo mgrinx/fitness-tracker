@@ -5,7 +5,7 @@ $(()=>{
     $("#create-workout-form").submit(()=>{
         $.post("/api/workouts", {
             name: $("#workout-name-input").val().trim()
-        }).then(location.reload());
+        }).then(() => location.reload());
         return false;
     });
 
@@ -18,7 +18,7 @@ $(()=>{
         $.ajax({
             url: "/api/workouts/"+flaggedWorkout,
             method: "DELETE"
-        }).then(location.reload());
+        }).then(() => location.reload());
     });
 
 });
